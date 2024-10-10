@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retirement Planner</title>
+  </head>
+  <body>
+    <h1>RETIREMENT PLANNER</h1>
+    <div class="container">
+      <div class="input-group">
+        <label for="monthly-income"
+          >At today's value, I need a monthly retirement income of</label
+        >
+        <div class="slider-container">
+          <input
+            type="range"
+            id="monthly-income"
+            min="0"
+            max="999000"
+            value="0"
+            step="1"
+          />
+          <input type="text" class="input-style" id="monthly-income-value" />
+        </div>
+        <div id="monthly-income-error" class="error-message"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="current-age">My current age is</label>
+        <div class="slider-container">
+          <input
+            type="range"
+            id="current-age"
+            min="0"
+            max="65"
+            value="0"
+            step="1"
+          />
+          <input type="text" class="input-style" id="current-age-value" />
+        </div>
+        <div id="current-age-error" class="error-message"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="retirement-age">I will retire at the age of</label>
+        <div class="slider-container">
+          <input
+            type="range"
+            id="retirement-age"
+            min="0"
+            max="75"
+            value="0"
+            step="1"
+          />
+          <input type="text" class="input-style" id="retirement-age-value" />
+        </div>
+        <div id="retirement-age-error" class="error-message"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="income-age"
+          >After retirement, I need income till the age of</label
+        >
+        <div class="slider-container">
+          <input
+            type="range"
+            id="income-age"
+            min="0"
+            max="99"
+            value="0"
+            step="1"
+          />
+          <input type="text" class="input-style" id="income-age-value" />
+        </div>
+        <div id="income-age-error" class="error-message"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="pre-retirement-rate"
+          >Till I retire, I will invest at an annual interest rate of</label
+        >
+        <div class="slider-container">
+          <input
+            type="range"
+            id="pre-retirement-rate"
+            min="0"
+            max="20"
+            value="0"
+            step="0.5"
+          />
+          <input
+            type="text"
+            class="input-style"
+            id="pre-retirement-rate-value"
+          />
+        </div>
+        <div id="pre-retirement-rate-error" class="error-message"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="post-retirement-rate"
+          >Post-Retirement, I will invest at an annual interest rate of</label
+        >
+        <div class="slider-container">
+          <input
+            type="range"
+            id="post-retirement-rate"
+            min="0"
+            max="20"
+            value="0"
+            step="0.5"
+          />
+          <input
+            type="text"
+            class="input-style"
+            id="post-retirement-rate-value"
+          />
+        </div>
+        <div id="post-retirement-rate-error" class="error-message"></div>
+      </div>
+    </div>
+    <div class="btn">
+      <button id="button">Calculate</button>
+    </div>
+
+    <div class="plan">
+      <div id="results"></div>
+      <div class="plan2">
+        <div id="retirement-savings-plan"></div>
+      </div>
+      <div class="plan3">
+        <div id="post-retirement-pension-plan"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
